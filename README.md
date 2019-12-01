@@ -18,10 +18,6 @@ https://ductran963.github.io/teamTemplateEngine/
 
 ![image info](./nodeJS.png)
 
-#### Generating HTML
-
-![image info](./generatedHtml.png)
-
 #### Team Profile HTML
 
 ![image info](./team.png)
