@@ -13,13 +13,13 @@ let teamProfile = "";
 const renderManager = manager => {
   let template = fs.readFileSync(path.resolve(templateFile, "manager.html"), "utf8");
   var managerHtml = ""
-  managerHtml = managerHtml + template.replace(/{{ name }}/g, manager.getName())
+  managerHtml += template.replace(/{{ name }}/g, manager.getName())
     .replace(/{{ role }}/g, manager.getRole())
     .replace(/{{ email }}/g, manager.getEmail())
     .replace(/{{ id }}/g, manager.getId())
     .replace(/{{ officeNumber }}/g, manager.getPhone())
   // adding the updated html to team profile so later we can all it all the the main file html
-  teamProfile = teamProfile + managerHtml;
+  teamProfile += managerHtml;
 };
 
 
@@ -27,14 +27,14 @@ const renderManager = manager => {
 const renderIntern = intern => {
   let template = fs.readFileSync(path.resolve(templateFile, "intern.html"), "utf8");
   var internHtml = ""
-  internHtml = internHtml + template.replace(/{{ name }}/g, intern.getName())
+  internHtml +=  template.replace(/{{ name }}/g, intern.getName())
     .replace(/{{ role }}/g, intern.getRole())
     .replace(/{{ email }}/g, intern.getEmail())
     .replace(/{{ id }}/g, intern.getId())
     .replace(/{{ school }}/g, intern.getSchool())
 
   // adding the updated html to team profile so later we can all it all the the main file html  
-  teamProfile = teamProfile + internHtml;
+  teamProfile += internHtml;
 };
 
 
@@ -42,14 +42,14 @@ const renderIntern = intern => {
 const renderEngineer = engineer => {
   let template = fs.readFileSync(path.resolve(templateFile, "engineer.html"), "utf8");
   var engineerHtml = ""
-  engineerHtml = engineerHtml + template.replace(/{{ name }}/g, engineer.getName())
+  engineerHtml += template.replace(/{{ name }}/g, engineer.getName())
     .replace(/{{ role }}/g, engineer.getRole())
     .replace(/{{ email }}/g, engineer.getEmail())
     .replace(/{{ id }}/g, engineer.getId())
     .replace(/{{ github }}/g, engineer.getGithub())
 
   // adding the updated html to team profile so later we can all it all the the main file html  
-  teamProfile = teamProfile + engineerHtml;
+  teamProfile += engineerHtml;
 };
 
 
@@ -77,7 +77,7 @@ function makeIntern(name, id, email, school) {
 function renderMain() {
   let finalTemplate = fs.readFileSync(path.resolve(templateFile, "main.html"), "utf8")
   var finalHtml = ""
-  finalHtml = finalHtml + finalTemplate.replace(/{{ team }}/g, teamProfile)
+  finalHtml += finalTemplate.replace(/{{ team }}/g, teamProfile)
   let finalFile = path.join(__dirname, 'output', "/index.html");
 
   fs.writeFileSync(finalFile, finalHtml);
