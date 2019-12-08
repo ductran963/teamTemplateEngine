@@ -6,9 +6,9 @@ The purpose of this project is to be able to use class constructor and extended 
 
 #### Functionality
 
-The functionality of this project is to develop a team profile according to user input so it is easier for managers to keep track of their employee, and be able to have access to their contact information.
+The functionality of this project is to develop a team profile according to user input so it is easier for managers to keep track of their employees, and be able to have access to their employees' contact information.
 
-Users can input as many employees as they want, and the application should generate it accordingly.
+Users can input as many employees as they want, and the application should generate that it accordingly.
 
 #### Link to deployed github application: 
 
